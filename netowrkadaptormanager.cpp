@@ -34,11 +34,8 @@ void NetowrkAdaptorManager::onResetInterfaceWithIndex(int index)
 {
     QNetworkInterface i = m_interfaceList.at(index);
     /// @todo reset the interface i here
-    qDebug() << "reset called for interface:" << i.humanReadableName() << i.hardwareAddress();
-    QString disableCommand = "netsh interface set interface \"" + i.name() + "\" admin=disable";
-    QString enableCommand = "netsh interface set interface \"" + i.name() + "\" admin=enable";
-    QProcess::execute(disableCommand);
-    QProcess::execute(enableCommand);
+    qDebug() << "reset called for interface:" << i.name() << i.hardwareAddress();
+    onResetInterfaceByName(i.name());
 }
 
 void NetowrkAdaptorManager::onResetInterfaceByName(QString name)
