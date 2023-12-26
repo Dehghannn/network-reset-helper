@@ -1,0 +1,8 @@
+#ifndef UPDATESKIPPER_RC
+#define UPDATESKIPPER_RC
+#include <windows.h>
+//#if defined __cplusplus
+
+ID_ICON    ICON    DISCARDABLE    "updateskipper.ico"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "UpdateSkipper.exe.manifest"
+#endif /*UPDATESKIPPER_RC*/
