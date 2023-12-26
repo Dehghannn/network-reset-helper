@@ -6,6 +6,7 @@
 #include <QNetworkConfigurationManager>
 #include <QNetworkConfiguration>
 #include <QNetworkInterface>
+#include <QProcess>
 
 
 class NetowrkAdaptorManager : public QObject
@@ -27,6 +28,7 @@ public slots:
 private:
     QList<QNetworkInterface> m_interfaceList;
     QStringList m_interfaceNameList;
+
 
 };
 
